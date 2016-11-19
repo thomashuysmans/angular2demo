@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit(registerForm.value)" [formGroup]="registerForm">
+  <label>Username:</label>
+  <input type="text" formControlName="username">
+  <p *ngIf="registerForm.controls['username'].isdirty && registerForm.controls['username'].hasError('required')">This field is required</p>
+  
+  <label>Email:</label>
+  <input type="email" formControlName="email">
+  <p *ngIf="registerForm.controls.email.errors">This field is required</p>
+  
+  <label>Password:</label>
+  <input type="password" formControlName="password">  
+  <p *ngIf="registerForm.controls.password.errors">This field is required</p>
+  
+  <label>Confirm password:</label>
+  <input type="password" formControlName="confirmpassword" >
+  <p *ngIf="registerForm.controls.confirmpassword.errors">This field is required</p>
+  
+  <button [disabled]="!registerForm.valid"  type="submit">Submit</button>
+
+</form>
