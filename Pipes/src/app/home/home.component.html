@@ -1,0 +1,14 @@
+<p>
+  Pipes demo
+</p>
+
+<p>Datum van vandaag is {{ datumVanVandaag }}</p>
+<p>Datum van vandaag is {{ datumVanVandaag | date }}</p>
+<p>Datum van vandaag is {{ datumVanVandaag | date:"yyyy-MM-dd" }}</p>
+<p>Datum van vandaag is {{ datumVanVandaag | date:'fullDate' }}</p>
+<p>Datum van vandaag is {{ datumVanVandaag | date:'longDate' }}</p>
+
+
+<div *ngFor="let contact of ('app/contact.json' | contactsAsync )">
+  {{ contact.FirstName }}
+</div>
