@@ -8,12 +8,14 @@ import 'rxjs/add/operator/map';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactsAsyncPipe } from './contacts-async.pipe';
+import { ContactFilterPipe } from './contact-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactsAsyncPipe
+    ContactsAsyncPipe,
+    ContactFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,10 @@ import { ContactsAsyncPipe } from './contacts-async.pipe';
     HttpModule
   ],
   providers: [
-     { provide: LOCALE_ID, useValue: "nl-BE" }
+     { 
+       provide: LOCALE_ID, useValue: "nl-BE"
+      //  provide: LOCALE_ID, useValue: "en-US" 
+    }
   ],
   bootstrap: [AppComponent]
 })
