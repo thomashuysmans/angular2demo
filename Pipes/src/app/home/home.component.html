@@ -8,7 +8,10 @@
 <p>Datum van vandaag is {{ datumVanVandaag | date:'fullDate' }}</p>
 <p>Datum van vandaag is {{ datumVanVandaag | date:'longDate' }}</p>
 
+<p>Amount is {{ amount | currency }}</p>
+
+<p> 
 
 <div *ngFor="let contact of ('app/contact.json' | contactsAsync )">
-  {{ contact.FirstName }}
+  {{ contact.FirstName | contactFilter | lowercase }}
 </div>
