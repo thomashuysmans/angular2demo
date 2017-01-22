@@ -1,11 +1,15 @@
 
 <h1>Registration - Template Driven</h1>
 
-<form (ngSubmit)="submitUserRegistration()" #registrationForm="ngForm">
+<form (ngSubmit)="submitUserRegistration()" #registrationForm="ngForm" > <!-- -->
   <label>Username:</label>
-  <input type="text" [(ngModel)]="newUser.username" name="username" id="inputUsername" #username="ngModel" required >
+  <input type="text" 
+    [(ngModel)]="newUser.username" 
+    name="username" 
+    id="inputUsername" 
+    #username="ngModel" 
+    required >
   <p *ngIf="username.isdirty && username.errors?.required">This field is required</p>
-  
 
   <label>Email:</label>
   <input type="email" #email="ngModel" name="email" [(ngModel)]="newUser.email" required >
@@ -15,6 +19,9 @@
   <input type="password" #password="ngModel" name="password" [(ngModel)]="newUser.password" required >  
   <p *ngIf="password.isdirty && password.errors?.required ">This field is required</p>
    
-  <button [disabled]="!registrationForm.valid"  type="submit">Submit</button>
+  <button type="button" [disabled]="!registrationForm.valid" (click)="onCancel()" >Submit</button>
+  <button type="submit" [disabled]="!registrationForm.valid"  >Submit 2</button>
 
 </form>
+<!--
+type="submit"-->

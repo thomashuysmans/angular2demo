@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
 
 import { AppComponent } from './app.component';
 import { RegistrationReactiveComponent } from './registration-reactive/registration-reactive.component';

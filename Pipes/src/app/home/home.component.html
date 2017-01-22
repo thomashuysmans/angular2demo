@@ -13,5 +13,5 @@
 <p> 
 
 <div *ngFor="let contact of ('app/contact.json' | contactsAsync )">
-  {{ contact.FirstName | contactFilter | lowercase }}
+  {{ contact.FirstName | contactFilter | lowercase | uppercase }}
 </div>

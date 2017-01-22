@@ -11,7 +11,8 @@
    <div>
     <label>Email:</label>
     <input type="text" formControlName="email"> 
-    <p *ngIf="registerForm.controls.email.isdirty && registerForm.controls.email.errors?.required">This field is required</p>
+    <p *ngIf="registerForm.controls.email.isdirty && registerForm.controls.email.errors?.required">
+      This field is required</p>
   </div>
 
   <div>

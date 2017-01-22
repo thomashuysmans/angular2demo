@@ -24,8 +24,8 @@ import { ContactFilterPipe } from './contact-filter.pipe';
   ],
   providers: [
      { 
-       provide: LOCALE_ID, useValue: "nl-BE"
-      //  provide: LOCALE_ID, useValue: "en-US" 
+        provide: LOCALE_ID, useValue: "nl-BE"
+      // provide: LOCALE_ID, useValue: "en-US" 
     }
   ],
   bootstrap: [AppComponent]

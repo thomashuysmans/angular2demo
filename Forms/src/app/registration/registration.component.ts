@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 import { User } from './user';
 
@@ -7,7 +7,7 @@ import { User } from './user';
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent {
+export class RegistrationComponent implements OnInit {
 
   newUser: User;
 
@@ -17,6 +17,19 @@ export class RegistrationComponent {
 
   submitUserRegistration() : void {
     console.log("User: " + this.newUser);
+  }
+
+  ngOnInit()
+  {
+    console.log("in ngoninit");
+  }
+
+  onCancel() : void {
+    console.log("Cancel event");
+  }
+
+   ngOnChanges() {
+    console.log("in ngonchange");
   }
 
 }
