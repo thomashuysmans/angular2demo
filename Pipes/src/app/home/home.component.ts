@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  datumVanVandaag: Date;
+  dateOfToday: Date;
   amount: Number;
 
   constructor() { }
 
   ngOnInit() {
-    this.datumVanVandaag = new Date();
+    this.dateOfToday = new Date();
     this.amount = 1145.55;
   }
 

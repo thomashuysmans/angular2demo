@@ -2,13 +2,13 @@
   Pipes demo
 </p>
 
-<p>Datum van vandaag is {{ datumVanVandaag }}</p>
-<p>Datum van vandaag is {{ datumVanVandaag | date }}</p>
-<p>Datum van vandaag is {{ datumVanVandaag | date:"yyyy-MM-dd" }}</p>
-<p>Datum van vandaag is {{ datumVanVandaag | date:'fullDate' }}</p>
-<p>Datum van vandaag is {{ datumVanVandaag | date:'longDate' }}</p>
+<p>Date of today is {{ dateOfToday }}</p>
+<p>Date of today is {{ dateOfToday | date }}</p>
+<p>Date of today is {{ dateOfToday | date:"yyyy-MM-dd" }}</p>
+<p>Date of today is {{ dateOfToday | date:'fullDate' }}</p>
+<p>Date of today is {{ dateOfToday | date:'longDate' }}</p>
 
-<p>Amount is {{ amount | currency }}</p>
+<p>Amount is {{ amount | currency:'EUR' }}</p>
 
 <p> 
 
