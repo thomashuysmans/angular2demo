@@ -1,0 +1,11 @@
+<p>
+  home works!
+</p>
+
+
+<h2>More Requests</h2>
+  <button type="button" (click)="getData()">Get data</button>
+  <button type="button" (click)="doPost()">Do post</button>
+  <button type="button" (click)="doDelete()">Do delete</button>
+  <div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>
